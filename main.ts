@@ -238,13 +238,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     game.showLongText("haha u lost", DialogLayout.Bottom)
 })
 function time () {
-    info.startCountdown(3)
+    info.startCountdown(1.5)
 }
 info.onCountdownEnd(function () {
-    game.over(false, effects.confetti)
+    game.over(false, effects.dissolve)
 })
 let Badguy: Sprite = null
 let Goodguy: Sprite = null
+game.showLongText("Try to win!", DialogLayout.Bottom)
 hero()
 backgrouhd()
 camera()
